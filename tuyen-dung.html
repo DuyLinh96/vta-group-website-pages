@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tuyển dụng VTA Group: cập nhật cơ hội nghề nghiệp trong lĩnh vực vận tải đường thủy, khai thác cảng và xếp dỡ.">
+    <meta name="keywords" content="VTA Group, tuyển dụng hàng hải, vận tải đường thủy, khai thác cảng, việc làm VTA Group">
+    <meta name="author" content="VTA Group">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vtagroup.vn/tuyen-dung.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tuyển dụng - VTA Group">
+    <meta property="og:description" content="Tuyển dụng VTA Group: cập nhật cơ hội nghề nghiệp trong lĩnh vực vận tải đường thủy, khai thác cảng và xếp dỡ.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vtagroup.vn/tuyen-dung.html">
+    <meta property="og:image" content="https://vtagroup.vn/images/banner/banner-1.jpg">
+    <meta property="og:image:alt" content="Tàu vận tải của VTA Group trên đường thủy">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:site_name" content="VTA Group">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tuyển dụng - VTA Group">
+    <meta name="twitter:description" content="Tuyển dụng VTA Group: cập nhật cơ hội nghề nghiệp trong lĩnh vực vận tải đường thủy, khai thác cảng và xếp dỡ.">
+    <meta name="twitter:image" content="https://vtagroup.vn/images/banner/banner-1.jpg">
+    <meta name="twitter:image:alt" content="Tàu vận tải của VTA Group trên đường thủy">
+
+    <title>Tuyển dụng - VTA Group</title>
+    <link rel="icon" href="images/logo/logo-vta.svg" type="image/svg+xml">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Swiper.js -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css?v=20260731-nav" rel="stylesheet">
+    <link href="css/responsive.css?v=20260731-nav" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+    <link href="css/tech-backgrounds.css?v=20260731-nav" rel="stylesheet">
+
+    <style>
+        .page-banner {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-darker) 100%);
+            padding: 60px 0 40px;
+            color: var(--color-white);
+        }
+        .page-banner h1 {
+            font-family: var(--font-secondary);
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .page-banner p {
+            max-width: 700px;
+            margin-bottom: 0;
+            opacity: 0.92;
+        }
+        .breadcrumb-nav {
+            background-color: var(--color-light);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .breadcrumb-nav ul {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        .breadcrumb-nav ul li a {
+            color: var(--color-accent);
+        }
+        .breadcrumb-nav ul li a:hover {
+            color: var(--color-primary);
+        }
+        .breadcrumb-nav ul li::after {
+            content: '\f105';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 11px;
+            margin-left: 8px;
+            color: var(--color-text);
+        }
+        .breadcrumb-nav ul li:last-child::after {
+            display: none;
+        }
+        .breadcrumb-nav ul li:last-child {
+            color: var(--color-text);
+        }
+        .career-empty {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            padding: 45px 35px;
+            background: linear-gradient(180deg, var(--color-white) 0%, var(--color-light) 100%);
+            border: 1px solid rgba(0, 0, 0, 0.14);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .career-empty::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 180px;
+            height: 180px;
+            background-color: rgba(0, 0, 0, 0.08);
+            border-radius: 50%;
+        }
+        .career-empty__icon {
+            width: 96px;
+            height: 96px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            background-color: rgba(0, 0, 0, 0.08);
+            color: var(--color-accent);
+            border-radius: 50%;
+            font-size: 42px;
+        }
+        .career-empty h2 {
+            font-family: var(--font-secondary);
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 12px;
+        }
+        .career-empty p {
+            max-width: 680px;
+            margin: 0 auto 25px;
+            color: var(--color-text);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .career-empty__actions {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .career-values {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 50px;
+        }
+        .career-value-card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            padding: 26px 20px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .career-value-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .career-value-card__icon {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            background-color: rgba(0, 0, 0, 0.08);
+            border-radius: 50%;
+            color: var(--color-accent);
+            font-size: 25px;
+        }
+        .career-value-card h3 {
+            font-family: var(--font-secondary);
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 8px;
+        }
+        .career-value-card p {
+            color: var(--color-text);
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        .career-contact {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 30px;
+            align-items: stretch;
+            background-color: var(--color-white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+        }
+        .career-contact__intro {
+            padding: 34px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent-darker));
+            color: var(--color-white);
+        }
+        .career-contact__intro h2 {
+            font-family: var(--font-secondary);
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .career-contact__intro p {
+            margin-bottom: 0;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        .career-contact__list {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .career-contact__item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .career-contact__item i {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background-color: rgba(0, 0, 0, 0.08);
+            border-radius: 50%;
+            color: var(--color-accent);
+        }
+        .career-contact__item h3 {
+            font-family: var(--font-secondary);
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 4px;
+        }
+        .career-contact__item p,
+        .career-contact__item a {
+            color: var(--color-text);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        .career-contact__item a:hover {
+            color: var(--color-accent);
+        }
+        @media (max-width: 992px) {
+            .career-values {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .career-contact {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 576px) {
+            .page-banner h1 {
+                font-size: 30px;
+            }
+            .career-empty {
+                padding: 35px 20px;
+            }
+            .career-empty h2 {
+                font-size: 24px;
+            }
+            .career-empty__actions {
+                flex-direction: column;
+            }
+            .career-empty__actions .btn {
+                justify-content: center;
+            }
+            .career-values,
+            .career-contact__list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== TOP BAR ========== -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar__inner">
+                <div class="top-bar__welcome">
+                    <span>Chào mừng đến với VTA Group</span>
+                </div>
+                <div class="top-bar__right">
+                    <div class="top-bar__contact">
+                        <a href="tel:+84908306127"><i class="fas fa-phone-alt"></i> 0908 306 127</a>
+                        <a href="mailto:tnhhxnkvta@gmail.com"><i class="fas fa-envelope"></i> tnhhxnkvta@gmail.com</a>
+                    </div>
+                    <div class="top-bar__social">
+                        <span aria-hidden="true"><i class="fab fa-facebook-f"></i></span>
+                        <span aria-hidden="true"><i class="fas fa-comment-dots"></i></span>
+                        <span aria-hidden="true"><i class="fab fa-youtube"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <div class="header__logo-text">
+                            <span class="header__logo-name">VTA GROUP</span>
+                            <span class="header__logo-slogan">Vững bước thành công</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="header__info">
+                    <div class="header__info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Trụ sở chính</strong>
+                            <span>Khu Lĩnh Đông, Phường Phạm Thái, Thị xã Kinh Môn, Tỉnh Hải Dương</span>
+                        </div>
+                    </div>
+                    <div class="header__info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Giờ làm việc</strong>
+                            <span>Thứ 2 - Thứ 7: 8:00 - 17:30</span>
+                        </div>
+                    </div>
+                    <div class="header__info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Hotline</strong>
+                            <span>0908 306 127</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="main-nav" id="mainNav">
+        <div class="container">
+            <div class="main-nav__inner">
+                <a href="index.html" class="main-nav__brand" aria-label="VTA Group"><img src="images/logo/vta-logo-light-mode.png" alt="VTA Group"></a>
+                <button class="main-nav__toggle" id="navToggle" aria-label="Mở menu" aria-controls="navMenu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="main-nav__menu" id="navMenu">
+                    <li class="main-nav__item">
+                        <a href="index.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--dropdown">
+                        <a href="dich-vu.html" aria-haspopup="true" aria-expanded="false">LĨNH VỰC HOẠT ĐỘNG <i class="fas fa-chevron-down"></i></a>
+                        <ul class="main-nav__dropdown main-nav__mega">
+                            <li class="main-nav__mega-col"><span class="main-nav__mega-title">Chuỗi vận hành</span><a href="dich-vu.html#khai-thac-cang-bien">Khai thác cảng biển</a><a href="dich-vu.html#van-tai-duong-thuy">Vận tải đường thủy</a></li>
+                            <li class="main-nav__mega-col"><span class="main-nav__mega-title">Thương mại & hỗ trợ</span><a href="dich-vu.html#thuong-mai-than">Thương mại than</a><a href="dich-vu.html#thuong-mai-cap-dien">Thương mại cáp điện</a><a href="dich-vu.html#kinh-doanh-van-tai-xep-do">Vận tải và xếp dỡ</a></li>
+                            <li class="main-nav__mega-col"><span class="main-nav__mega-title">Theo nhu cầu</span><a href="lien-he.html">Tư vấn tuyến vận chuyển</a><a href="lien-he.html">Yêu cầu báo giá</a><a href="doi-tau.html">Năng lực phương tiện</a></li>
+                            <li class="main-nav__mega-card"><span>Giải pháp tích hợp</span><strong>Một đầu mối cho cảng biển, vận tải thủy và xếp dỡ</strong><a href="lien-he.html">Trao đổi nhu cầu <i class="fas fa-arrow-right"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item main-nav__item--dropdown">
+                        <a href="tin-tuc.html" aria-haspopup="true" aria-expanded="false">TIN TỨC <i class="fas fa-chevron-down"></i></a>
+                        <ul class="main-nav__dropdown">
+                            <li><a href="tin-tuc.html#tin-cong-ty">Tin công ty</a></li>
+                            <li><a href="tin-tuc.html#tin-nganh">Tin ngành hàng hải</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item active">
+                        <a href="tuyen-dung.html">TUYỂN DỤNG</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="lien-he.html">LIÊN HỆ</a>
+                    </li>
+                </ul>
+                <div class="main-nav__search" data-nav-search>
+                    <form action="tin-tuc.html" method="get" role="search">
+                        <label class="visually-hidden" for="siteSearch">Tìm kiếm</label>
+                        <input type="search" id="siteSearch" name="q" placeholder="Tìm kiếm..." autocomplete="off">
+                        <button type="submit" aria-label="Mở tìm kiếm" aria-expanded="false">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ========== PAGE BANNER ========== -->
+        <section class="page-banner">
+            <div class="container">
+                <h1>Tuyển dụng</h1>
+                <p>Cập nhật cơ hội nghề nghiệp tại VTA Group trong lĩnh vực vận tải đường thủy, khai thác cảng và các hoạt động hỗ trợ vận hành.</p>
+            </div>
+        </section>
+
+        <!-- ========== BREADCRUMB ========== -->
+        <div class="breadcrumb-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li>Tuyển dụng</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ========== CAREER CONTENT ========== -->
+        <section class="section section--gray">
+            <div class="container">
+                <div class="career-empty" data-aos="fade-up">
+                    <div class="career-empty__icon" aria-hidden="true">
+                        <i class="fas fa-business-time"></i>
+                    </div>
+                    <h2>Hiện chưa có vị trí tuyển dụng</h2>
+                    <p>VTA Group sẽ cập nhật các cơ hội nghề nghiệp mới tại đây. Ứng viên quan tâm có thể gửi trước thông tin qua email hoặc form liên hệ để bộ phận phụ trách thuận tiện lưu hồ sơ và phản hồi khi có vị trí phù hợp.</p>
+                    <div class="career-empty__actions">
+                        <a href="mailto:tnhhxnkvta@gmail.com?subject=Ung%20tuyen%20VTA%20Group" class="btn btn--primary"><i class="fas fa-paper-plane"></i> Gửi hồ sơ quan tâm</a>
+                        <a href="lien-he.html" class="btn btn--outline"><i class="fas fa-headset"></i> Liên hệ phòng nhân sự</a>
+                    </div>
+                </div>
+
+                <div class="section__header" data-aos="fade-up">
+                    <div class="section__label">Môi trường làm việc</div>
+                    <h2 class="section__title">Giá trị VTA Group hướng tới</h2>
+                    <p class="section__desc">Chúng tôi xây dựng môi trường làm việc dựa trên tinh thần an toàn, trách nhiệm và phối hợp hiệu quả trong từng hoạt động.</p>
+                </div>
+
+                <div class="career-values">
+                    <article class="career-value-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="career-value-card__icon" aria-hidden="true">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <h3>An toàn</h3>
+                        <p>Ưu tiên an toàn con người, phương tiện, hàng hóa và môi trường trong mọi công việc.</p>
+                    </article>
+                    <article class="career-value-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="career-value-card__icon" aria-hidden="true">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Chuyên nghiệp</h3>
+                        <p>Khuyến khích tác phong rõ ràng, đúng quy trình và chủ động trong phối hợp vận hành.</p>
+                    </article>
+                    <article class="career-value-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="career-value-card__icon" aria-hidden="true">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Đồng hành</h3>
+                        <p>Đề cao tinh thần hợp tác giữa các bộ phận để cùng giải quyết nhu cầu thực tế của khách hàng.</p>
+                    </article>
+                    <article class="career-value-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="career-value-card__icon" aria-hidden="true">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Phát triển bền vững</h3>
+                        <p>Hướng đến năng lực lâu dài thông qua cải tiến quy trình, trách nhiệm và học hỏi liên tục.</p>
+                    </article>
+                </div>
+
+                <section class="career-contact" aria-labelledby="career-contact-title" data-aos="fade-up">
+                    <div class="career-contact__intro">
+                        <h2 id="career-contact-title">Thông tin liên hệ tuyển dụng</h2>
+                        <p>Ứng viên quan tâm có thể gửi thông tin cá nhân, vị trí mong muốn và kinh nghiệm liên quan qua email hoặc liên hệ trực tiếp để được hỗ trợ.</p>
+                    </div>
+                    <div class="career-contact__list">
+                        <div class="career-contact__item">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p><a href="mailto:tnhhxnkvta@gmail.com">tnhhxnkvta@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="career-contact__item">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                            <div>
+                                <h3>Điện thoại</h3>
+                                <p><a href="tel:+84908306127">0908 306 127</a></p>
+                            </div>
+                        </div>
+                        <div class="career-contact__item">
+                            <i class="fas fa-building" aria-hidden="true"></i>
+                            <div>
+                                <h3>Văn phòng Hà Nội</h3>
+                                <p>Tòa nhà Moonlight, 5/6 Vũ Đức Thận, Việt Hưng, Long Biên, Hà Nội</p>
+                            </div>
+                        </div>
+                        <div class="career-contact__item">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <div>
+                                <h3>Trụ sở chính</h3>
+                                <p>Khu Lĩnh Đông, Phường Phạm Thái, Thị xã Kinh Môn, Tỉnh Hải Dương</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col footer__col--info">
+                    <div class="footer__logo">
+                        <span class="footer__logo-name">VTA GROUP</span>
+                        <span class="footer__logo-slogan">Vững bước thành công</span>
+                    </div>
+                    <ul class="footer__contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Trụ sở chính: Khu Lĩnh Đông, Phường Phạm Thái, Thị xã Kinh Môn, Tỉnh Hải Dương</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>0908 306 127</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>tnhhxnkvta@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-building"></i>
+                            <span>Văn phòng Hà Nội: Tòa nhà Moonlight, 5/6 Vũ Đức Thận, Việt Hưng, Long Biên, Hà Nội</span>
+                        </li>
+                    </ul>
+                    <div class="footer__social">
+                        <span aria-hidden="true"><i class="fab fa-facebook-f"></i></span>
+                        <span aria-hidden="true"><i class="fas fa-comment-dots"></i></span>
+                        <span aria-hidden="true"><i class="fab fa-youtube"></i></span>
+                        <span aria-hidden="true"><i class="fab fa-linkedin-in"></i></span>
+                    </div>
+                </div>
+                <div class="footer__col footer__col--links">
+                    <h3 class="footer__title">Danh mục</h3>
+                    <ul class="footer__menu">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="dich-vu.html">Lĩnh vực hoạt động</a></li>
+                        <li><a href="tin-tuc.html">Tin tức</a></li>
+                        <li><a href="tuyen-dung.html">Tuyển dụng</a></li>
+                        <li><a href="lien-he.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col footer__col--services">
+                    <h3 class="footer__title">Lĩnh vực hoạt động</h3>
+                    <ul class="footer__menu">
+                        <li><a href="dich-vu.html#khai-thac-cang-bien">Khai thác cảng biển</a></li>
+                        <li><a href="dich-vu.html#van-tai-duong-thuy">Vận tải đường thủy</a></li>
+                        <li><a href="dich-vu.html#thuong-mai-than">Thương mại than</a></li>
+                        <li><a href="dich-vu.html#thuong-mai-cap-dien">Thương mại cáp điện</a></li>
+                        <li><a href="dich-vu.html#kinh-doanh-van-tai-xep-do">Kinh doanh vận tải và xếp dỡ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col footer__col--map">
+                    <h3 class="footer__title">Bản đồ</h3>
+                    <div class="footer__map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59587.97785448771!2d106.2841962!3d20.9373413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31359b7e7d0c5f15%3A0x2b1e7f5c5b7f7c0a!2zSOG6o2kgRMawxqFuZw!5e0!3m2!1svi!2svn!4v1700000000000"
+                            width="100%"
+                            height="200"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Bản đồ VTA Group">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>&copy; 2022 - 2024 VTA Group. Bản quyền thuộc về VTA Group. Vững bước thành công.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== BACK TO TOP ========== -->
+    <button class="back-to-top" id="backToTop" aria-label="Về đầu trang">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

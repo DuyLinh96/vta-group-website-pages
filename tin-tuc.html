@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tin tức VTA Group: cập nhật tin công ty, hoạt động doanh nghiệp và tin ngành vận tải đường thủy, cảng biển.">
+    <meta name="keywords" content="VTA Group, tin tức, sự kiện, vận tải đường thủy, cảng biển">
+    <meta name="author" content="VTA Group">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vtagroup.vn/tin-tuc.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tin tức &amp; Sự kiện - VTA Group">
+    <meta property="og:description" content="Tin tức VTA Group: cập nhật tin công ty, hoạt động doanh nghiệp và tin ngành vận tải đường thủy, cảng biển.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vtagroup.vn/tin-tuc.html">
+    <meta property="og:image" content="https://vtagroup.vn/images/banner/banner-1.jpg">
+    <meta property="og:image:alt" content="Tàu vận tải của VTA Group trên đường thủy">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:site_name" content="VTA Group">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tin tức &amp; Sự kiện - VTA Group">
+    <meta name="twitter:description" content="Tin tức VTA Group: cập nhật tin công ty, hoạt động doanh nghiệp và tin ngành vận tải đường thủy, cảng biển.">
+    <meta name="twitter:image" content="https://vtagroup.vn/images/banner/banner-1.jpg">
+    <meta name="twitter:image:alt" content="Tàu vận tải của VTA Group trên đường thủy">
+
+    <title>Tin tức & Sự kiện - VTA Group</title>
+    <link rel="icon" href="images/logo/logo-vta.svg" type="image/svg+xml">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Swiper.js -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css?v=20260731-nav" rel="stylesheet">
+    <link href="css/responsive.css?v=20260731-nav" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+    <link href="css/tech-backgrounds.css?v=20260731-nav" rel="stylesheet">
+
+    <style>
+        .page-banner {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-darker) 100%);
+            padding: 60px 0 40px;
+            color: var(--color-white);
+        }
+        .page-banner h1 {
+            font-family: var(--font-secondary);
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .breadcrumb-nav {
+            background-color: var(--color-light);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .breadcrumb-nav ul {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        .breadcrumb-nav ul li a {
+            color: var(--color-accent);
+        }
+        .breadcrumb-nav ul li a:hover {
+            color: var(--color-primary);
+        }
+        .breadcrumb-nav ul li::after {
+            content: '\f105';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 11px;
+            margin-left: 8px;
+            color: var(--color-text);
+        }
+        .breadcrumb-nav ul li:last-child::after {
+            display: none;
+        }
+        .breadcrumb-nav ul li:last-child {
+            color: var(--color-text);
+        }
+        /* News page layout */
+        .news-page {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+            padding: 40px 0;
+        }
+        /* News grid */
+        .news-page__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        .news-page__item {
+            background-color: var(--color-white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .news-page__item:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-3px);
+        }
+        .news-page__image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        .news-page__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+            background: linear-gradient(135deg, var(--color-lighter), var(--color-text));
+        }
+        .news-page__item:hover .news-page__image img {
+            transform: scale(1.05);
+        }
+        .news-page__date {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            padding: 4px 10px;
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            font-size: 12px;
+            border-radius: var(--radius-sm);
+        }
+        .news-page__category-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 4px 10px;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .news-page__content {
+            padding: 20px;
+        }
+        .news-page__title {
+            font-family: var(--font-secondary);
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .news-page__title a {
+            color: var(--color-dark);
+        }
+        .news-page__title a:hover {
+            color: var(--color-accent);
+        }
+        .news-page__excerpt {
+            font-size: 14px;
+            color: var(--color-text);
+            line-height: 1.7;
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .news-page__meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 12px;
+            color: var(--color-text);
+        }
+        .news-page__meta i {
+            margin-right: 4px;
+            color: var(--color-accent);
+        }
+        /* Sidebar */
+        .news-sidebar {}
+        .sidebar-widget {
+            background-color: var(--color-white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+        .sidebar-widget__title {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: 15px 20px;
+            font-family: var(--font-secondary);
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .sidebar-widget ul li a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+            font-size: 14px;
+            color: var(--color-dark);
+            border-bottom: 1px solid var(--color-border);
+            transition: var(--transition);
+        }
+        .sidebar-widget ul li a:hover {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            padding-left: 25px;
+        }
+        .sidebar-widget ul li:last-child a {
+            border-bottom: none;
+        }
+        .sidebar-widget ul li a .count {
+            background-color: var(--color-light);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            color: var(--color-text);
+        }
+        .sidebar-widget ul li a:hover .count {
+            background-color: rgba(255,255,255,0.2);
+            color: var(--color-white);
+        }
+        /* Recent posts widget */
+        .recent-post {
+            display: flex;
+            gap: 12px;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--color-border);
+            transition: var(--transition);
+        }
+        .recent-post:last-child {
+            border-bottom: none;
+        }
+        .recent-post:hover {
+            background-color: var(--color-light);
+        }
+        .recent-post__image {
+            width: 70px;
+            height: 55px;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .recent-post__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: linear-gradient(135deg, var(--color-lighter), var(--color-text));
+        }
+        .recent-post__info h4 {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 4px;
+        }
+        .recent-post__info h4 a {
+            color: var(--color-dark);
+        }
+        .recent-post__info h4 a:hover {
+            color: var(--color-accent);
+        }
+        .recent-post__info span {
+            font-size: 11px;
+            color: var(--color-text);
+        }
+        /* Pagination */
+        .pagination-nav {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 30px;
+        }
+        .pagination-nav a,
+        .pagination-nav span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid var(--color-border);
+            color: var(--color-dark);
+            transition: var(--transition);
+        }
+        .pagination-nav a:hover,
+        .pagination-nav span.current {
+            background-color: var(--color-accent);
+            border-color: var(--color-accent);
+            color: var(--color-white);
+        }
+        @media (max-width: 768px) {
+            .news-page {
+                grid-template-columns: 1fr;
+            }
+            .news-page__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== TOP BAR ========== -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar__inner">
+                <div class="top-bar__welcome">
+                    <span>Chào mừng đến với VTA Group</span>
+                </div>
+                <div class="top-bar__right">
+                    <div class="top-bar__contact">
+                        <a href="tel:+84908306127"><i class="fas fa-phone-alt"></i> 0908 306 127</a>
+                        <a href="mailto:tnhhxnkvta@gmail.com"><i class="fas fa-envelope"></i> tnhhxnkvta@gmail.com</a>
+                    </div>
+                    <div class="top-bar__social">
+                        <span aria-hidden="true"><i class="fab fa-facebook-f"></i></span>
+                        <span aria-hidden="true"><i class="fas fa-comment-dots"></i></span>
+                        <span aria-hidden="true"><i class="fab fa-youtube"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <div class="header__logo-text">
+                            <span class="header__logo-name">VTA GROUP</span>
+                            <span class="header__logo-slogan">Vững bước thành công</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="header__info">
+                    <div class="header__info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Trụ sở chính</strong>
+                            <span>Khu Lĩnh Đông, Phường Phạm Thái, Thị xã Kinh Môn, Tỉnh Hải Dương</span>
+                        </div>
+                    </div>
+                    <div class="header__info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Giờ làm việc</strong>
+                            <span>Thứ 2 - Thứ 7: 8:00 - 17:30</span>
+                        </div>
+                    </div>
+                    <div class="header__info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Hotline</strong>
+                            <span>0908 306 127</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="main-nav" id="mainNav">
+        <div class="container">
+            <div class="main-nav__inner">
+                <a href="index.html" class="main-nav__brand" aria-label="VTA Group"><img src="images/logo/vta-logo-light-mode.png" alt="VTA Group"></a>
+                <button class="main-nav__toggle" id="navToggle" aria-label="Mở menu" aria-controls="navMenu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="main-nav__menu" id="navMenu">
+                    <li class="main-nav__item">
+                        <a href="index.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--dropdown">
+                        <a href="dich-vu.html" aria-haspopup="true" aria-expanded="false">LĨNH VỰC HOẠT ĐỘNG <i class="fas fa-chevron-down"></i></a>
+                        <ul class="main-nav__dropdown main-nav__mega">
+                            <li class="main-nav__mega-col"><span class="main-nav__mega-title">Chuỗi vận hành</span><a href="dich-vu.html#khai-thac-cang-bien">Khai thác cảng biển</a><a href="dich-vu.html#van-tai-duong-thuy">Vận tải đường thủy</a></li>
+                            <li class="main-nav__mega-col"><span class="main-nav__mega-title">Thương mại & hỗ trợ</span><a href="dich-vu.html#thuong-mai-than">Thương mại than</a><a href="dich-vu.html#thuong-mai-cap-dien">Thương mại cáp điện</a><a href="dich-vu.html#kinh-doanh-van-tai-xep-do">Vận tải và xếp dỡ</a></li>
+                            <li class="main-nav__mega-col"><span class="main-nav__mega-title">Theo nhu cầu</span><a href="lien-he.html">Tư vấn tuyến vận chuyển</a><a href="lien-he.html">Yêu cầu báo giá</a><a href="doi-tau.html">Năng lực phương tiện</a></li>
+                            <li class="main-nav__mega-card"><span>Giải pháp tích hợp</span><strong>Một đầu mối cho cảng biển, vận tải thủy và xếp dỡ</strong><a href="lien-he.html">Trao đổi nhu cầu <i class="fas fa-arrow-right"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item main-nav__item--dropdown active">
+                        <a href="tin-tuc.html" aria-haspopup="true" aria-expanded="false">TIN TỨC <i class="fas fa-chevron-down"></i></a>
+                        <ul class="main-nav__dropdown">
+                            <li><a href="tin-tuc.html#tin-cong-ty">Tin công ty</a></li>
+                            <li><a href="tin-tuc.html#tin-nganh">Tin ngành hàng hải</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="tuyen-dung.html">TUYỂN DỤNG</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="lien-he.html">LIÊN HỆ</a>
+                    </li>
+                </ul>
+                <div class="main-nav__search" data-nav-search>
+                    <form action="tin-tuc.html" method="get" role="search">
+                        <label class="visually-hidden" for="siteSearch">Tìm kiếm</label>
+                        <input type="search" id="siteSearch" name="q" placeholder="Tìm kiếm..." autocomplete="off">
+                        <button type="submit" aria-label="Mở tìm kiếm" aria-expanded="false">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE BANNER ========== -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Tin tức & Sự kiện</h1>
+            <p>Cập nhật thông tin mới nhất từ VTA Group và ngành vận tải đường thủy</p>
+        </div>
+    </section>
+
+    <!-- ========== BREADCRUMB ========== -->
+    <div class="breadcrumb-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li>Tin tức & Sự kiện</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ========== NEWS CONTENT ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="news-page">
+                <!-- News Grid -->
+                <div class="news-page__main">
+                    <div class="news-page__grid">
+                        <!-- Article 1 -->
+                        <article class="news-page__item" data-aos="fade-up" data-aos-delay="100" id="tin-cong-ty">
+                            <div class="news-page__image">
+                                <a href="#">
+                                    <img src="images/news/news-1.jpg" alt="VTA Group kỷ niệm thành lập" loading="lazy">
+                                </a>
+                                <span class="news-page__date">01/08/2024</span>
+                                <span class="news-page__category-badge">Tin công ty</span>
+                            </div>
+                            <div class="news-page__content">
+                                <h3 class="news-page__title">
+                                    <a href="#">VTA Group kỷ niệm 2 năm thành lập và phát triển</a>
+                                </h3>
+                                <p class="news-page__excerpt">Nhìn lại chặng đường 2 năm hình thành và phát triển, VTA Group tiếp tục định hướng hoạt động trong các lĩnh vực cảng biển, vận tải đường thủy và thương mại...</p>
+                                <div class="news-page__meta">
+                                    <span><i class="fas fa-user"></i> Admin</span>
+                                    <span><i class="fas fa-eye"></i> 1.250</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Article 2 -->
+                        <article class="news-page__item" data-aos="fade-up" data-aos-delay="200" id="tin-nganh">
+                            <div class="news-page__image">
+                                <a href="#">
+                                    <img src="images/news/news-2.jpg" alt="Ngành vận tải đường thủy" loading="lazy">
+                                </a>
+                                <span class="news-page__date">15/07/2024</span>
+                                <span class="news-page__category-badge">Tin ngành hàng hải</span>
+                            </div>
+                            <div class="news-page__content">
+                                <h3 class="news-page__title">
+                                    <a href="#">Ngành vận tải đường thủy Việt Nam: Cơ hội và thách thức trong năm 2024</a>
+                                </h3>
+                                <p class="news-page__excerpt">Vận tải đường thủy nội địa đang được Chính phủ đầu tư mạnh mẽ, với nhiều dự án nâng cấp luồng tuyến, mở ra cơ hội phát triển lớn cho các doanh nghiệp trong ngành...</p>
+                                <div class="news-page__meta">
+                                    <span><i class="fas fa-user"></i> Admin</span>
+                                    <span><i class="fas fa-eye"></i> 980</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Article 3 -->
+                        <article class="news-page__item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="news-page__image">
+                                <a href="#">
+                                    <img src="images/news/news-3.jpg" alt="Hoạt động phối hợp vận tải của VTA Group" loading="lazy">
+                                </a>
+                                <span class="news-page__date">01/07/2024</span>
+                                <span class="news-page__category-badge">Tin công ty</span>
+                            </div>
+                            <div class="news-page__content">
+                                <h3 class="news-page__title">
+                                    <a href="#">VTA Group tăng cường phối hợp vận tải thủy</a>
+                                </h3>
+                                <p class="news-page__excerpt">VTA Group tiếp tục hoàn thiện quy trình phối hợp giữa vận tải, giao nhận và hỗ trợ khách hàng, hướng đến hoạt động vận hành linh hoạt và hiệu quả hơn...</p>
+                                <div class="news-page__meta">
+                                    <span><i class="fas fa-user"></i> Admin</span>
+                                    <span><i class="fas fa-eye"></i> 1.020</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Article 4 -->
+                        <article class="news-page__item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="news-page__image">
+                                <a href="#">
+                                    <img src="images/news/news-4.jpg" alt="Hợp tác chiến lược" loading="lazy">
+                                </a>
+                                <span class="news-page__date">20/06/2024</span>
+                                <span class="news-page__category-badge">Tin công ty</span>
+                            </div>
+                            <div class="news-page__content">
+                                <h3 class="news-page__title">
+                                    <a href="#">VTA Group ký kết hợp tác chiến lược với đối tác mới tại Hải Phòng</a>
+                                </h3>
+                                <p class="news-page__excerpt">Lễ ký kết hợp tác chiến lược giữa VTA Group và Công ty TNHH Cảng Hải Phòng đánh dấu bước phát triển mới trong mạng lưới vận tải, mở rộng tuyến vận chuyển...</p>
+                                <div class="news-page__meta">
+                                    <span><i class="fas fa-user"></i> Admin</span>
+                                    <span><i class="fas fa-eye"></i> 870</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Article 5 -->
+                        <article class="news-page__item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="news-page__image">
+                                <a href="#">
+                                    <img src="images/news/news-1.jpg" alt="Quy định mới về vận tải" loading="lazy">
+                                </a>
+                                <span class="news-page__date">10/06/2024</span>
+                                <span class="news-page__category-badge">Tin ngành hàng hải</span>
+                            </div>
+                            <div class="news-page__content">
+                                <h3 class="news-page__title">
+                                    <a href="#">Quy định mới về an toàn giao thông đường thủy nội địa từ 01/07/2024</a>
+                                </h3>
+                                <p class="news-page__excerpt">Bộ Giao thông Vận tải ban hành thông tư mới về quy chuẩn an toàn kỹ thuật phương tiện thủy nội địa, yêu cầu các doanh nghiệp cập nhật và tuân thủ...</p>
+                                <div class="news-page__meta">
+                                    <span><i class="fas fa-user"></i> Admin</span>
+                                    <span><i class="fas fa-eye"></i> 750</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Article 6 -->
+                        <article class="news-page__item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="news-page__image">
+                                <a href="#">
+                                    <img src="images/news/news-2.jpg" alt="Đón tàu mới VTA 06" loading="lazy">
+                                </a>
+                                <span class="news-page__date">15/05/2024</span>
+                                <span class="news-page__category-badge">Tin công ty</span>
+                            </div>
+                            <div class="news-page__content">
+                                <h3 class="news-page__title">
+                                    <a href="#">VTA Group đón nhận tàu VTA 06 - Mở rộng đội tàu container</a>
+                                </h3>
+                                <p class="news-page__excerpt">VTA Group tiếp tục hoàn thiện năng lực tổ chức dịch vụ, nâng cao khả năng phối hợp vận tải và xếp dỡ theo nhu cầu của khách hàng...</p>
+                                <div class="news-page__meta">
+                                    <span><i class="fas fa-user"></i> Admin</span>
+                                    <span><i class="fas fa-eye"></i> 1.500</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination-nav">
+                        <span class="current">1</span>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="news-sidebar">
+                    <!-- Categories -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget__title">
+                            <i class="fas fa-folder" style="margin-right: 8px;"></i> Danh mục
+                        </div>
+                        <ul>
+                            <li><a href="#tin-cong-ty">Tin công ty <span class="count">12</span></a></li>
+                            <li><a href="#tin-nganh">Tin ngành hàng hải <span class="count">8</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Recent Posts -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget__title">
+                            <i class="fas fa-clock" style="margin-right: 8px;"></i> Bài viết mới
+                        </div>
+                        <div class="recent-post">
+                            <div class="recent-post__image">
+                                <img src="images/news/news-1.jpg" alt="Tin mới" loading="lazy">
+                            </div>
+                            <div class="recent-post__info">
+                                <h4><a href="#">VTA Group kỷ niệm 2 năm thành lập</a></h4>
+                                <span><i class="fas fa-calendar-alt"></i> 01/08/2024</span>
+                            </div>
+                        </div>
+                        <div class="recent-post">
+                            <div class="recent-post__image">
+                                <img src="images/news/news-4.jpg" alt="Tin mới" loading="lazy">
+                            </div>
+                            <div class="recent-post__info">
+                                <h4><a href="#">Ký kết hợp tác chiến lược mới</a></h4>
+                                <span><i class="fas fa-calendar-alt"></i> 20/06/2024</span>
+                            </div>
+                        </div>
+                        <div class="recent-post">
+                            <div class="recent-post__image">
+                                <img src="images/news/news-2.jpg" alt="Tin mới" loading="lazy">
+                            </div>
+                            <div class="recent-post__info">
+                                <h4><a href="#">Đón nhận tàu VTA 06 mới</a></h4>
+                                <span><i class="fas fa-calendar-alt"></i> 15/05/2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget__title">
+                            <i class="fas fa-tags" style="margin-right: 8px;"></i> Từ khóa
+                        </div>
+                        <div style="padding: 15px; display: flex; flex-wrap: wrap; gap: 8px;">
+                            <a href="#" style="padding: 5px 12px; background: var(--color-light); border-radius: var(--radius-sm); font-size: 12px; color: var(--color-text);">Vận tải đường thủy</a>
+                            <a href="#" style="padding: 5px 12px; background: var(--color-light); border-radius: var(--radius-sm); font-size: 12px; color: var(--color-text);">Đường biển</a>
+                            <a href="#" style="padding: 5px 12px; background: var(--color-light); border-radius: var(--radius-sm); font-size: 12px; color: var(--color-text);">Phối hợp vận hành</a>
+                            <a href="#" style="padding: 5px 12px; background: var(--color-light); border-radius: var(--radius-sm); font-size: 12px; color: var(--color-text);">Hải Dương</a>
+                            <a href="#" style="padding: 5px 12px; background: var(--color-light); border-radius: var(--radius-sm); font-size: 12px; color: var(--color-text);">An toàn hàng hải</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col footer__col--info">
+                    <div class="footer__logo">
+                        <span class="footer__logo-name">VTA GROUP</span>
+                        <span class="footer__logo-slogan">Vững bước thành công</span>
+                    </div>
+                    <ul class="footer__contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Trụ sở chính: Khu Lĩnh Đông, Phường Phạm Thái, Thị xã Kinh Môn, Tỉnh Hải Dương</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>0908 306 127</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>tnhhxnkvta@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-building"></i>
+                            <span>Văn phòng Hà Nội: Tòa nhà Moonlight, 5/6 Vũ Đức Thận, Việt Hưng, Long Biên, Hà Nội</span>
+                        </li>
+                    </ul>
+                    <div class="footer__social">
+                        <span aria-hidden="true"><i class="fab fa-facebook-f"></i></span>
+                        <span aria-hidden="true"><i class="fas fa-comment-dots"></i></span>
+                        <span aria-hidden="true"><i class="fab fa-youtube"></i></span>
+                        <span aria-hidden="true"><i class="fab fa-linkedin-in"></i></span>
+                    </div>
+                </div>
+                <div class="footer__col footer__col--links">
+                    <h3 class="footer__title">Danh mục</h3>
+                    <ul class="footer__menu">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="dich-vu.html">Lĩnh vực hoạt động</a></li>
+                        <li><a href="tin-tuc.html">Tin tức</a></li>
+                        <li><a href="tuyen-dung.html">Tuyển dụng</a></li>
+                        <li><a href="lien-he.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col footer__col--services">
+                    <h3 class="footer__title">Lĩnh vực hoạt động</h3>
+                    <ul class="footer__menu">
+                        <li><a href="dich-vu.html#khai-thac-cang-bien">Khai thác cảng biển</a></li>
+                        <li><a href="dich-vu.html#van-tai-duong-thuy">Vận tải đường thủy</a></li>
+                        <li><a href="dich-vu.html#thuong-mai-than">Thương mại than</a></li>
+                        <li><a href="dich-vu.html#thuong-mai-cap-dien">Thương mại cáp điện</a></li>
+                        <li><a href="dich-vu.html#kinh-doanh-van-tai-xep-do">Kinh doanh vận tải và xếp dỡ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col footer__col--map">
+                    <h3 class="footer__title">Bản đồ</h3>
+                    <div class="footer__map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59587.97785448771!2d106.2841962!3d20.9373413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31359b7e7d0c5f15%3A0x2b1e7f5c5b7f7c0a!2zSOG6o2kgRMawxqFuZw!5e0!3m2!1svi!2svn!4v1700000000000"
+                            width="100%"
+                            height="200"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Bản đồ VTA Group">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>&copy; 2022 - 2024 VTA Group. Bản quyền thuộc về VTA Group. Vững bước thành công.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== BACK TO TOP ========== -->
+    <button class="back-to-top" id="backToTop" aria-label="Về đầu trang">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

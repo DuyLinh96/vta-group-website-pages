@@ -1,0 +1,173 @@
+/* ============================================
+   VTA Group - Animations & Effects
+   ============================================ */
+
+@keyframes heroMotionSweep {
+    0%, 100% { transform: translateX(-34%); opacity: 0.32; }
+    50% { transform: translateX(34%); opacity: 0.58; }
+}
+
+@keyframes heroTextReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---- Shine effect on images ---- */
+.services__image::before,
+.fleet__image::before,
+.news__image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.3) 100%
+    );
+    transform: skewX(-25deg);
+    z-index: 1;
+    transition: 0.6s;
+}
+
+.services__item:hover .services__image::before,
+.fleet__item:hover .fleet__image::before,
+.news__item:hover .news__image::before {
+    left: 125%;
+}
+
+.services__image,
+.fleet__image,
+.news__image {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ---- Counter animation ---- */
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.about__stat.animated .about__stat-number {
+    animation: countUp 0.5s ease forwards;
+}
+
+/* ---- Fade in up for sections ---- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---- Float animation for badge ---- */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.about__image-badge {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ---- Loading placeholder for images ---- */
+@keyframes shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: calc(200px + 100%) 0; }
+}
+
+img[src=""],
+img:not([src]) {
+    background: linear-gradient(90deg, var(--color-lighter) 25%, rgba(145, 137, 130, 0.24) 50%, var(--color-lighter) 75%);
+    background-size: 200px 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* ---- Smooth underline hover for nav ---- */
+.main-nav__item > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.main-nav__item > a {
+    position: relative;
+}
+
+.main-nav__item > a:hover::after,
+.main-nav__item.active > a::after {
+    width: 100%;
+}
+
+/* ---- Footer link hover ---- */
+.footer__menu li a {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* ---- Button ripple effect ---- */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .hero-slider__content--reveal > * {
+        opacity: 1;
+        transform: none;
+        animation: none !important;
+    }
+
+    .hero-slider__motion {
+        display: none;
+    }
+
+    .impact-story__media {
+        background-attachment: scroll;
+    }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- VIMC - red and blue -->
+  <rect width="200" height="80" fill="white"/>
+  <!-- Icon - stylized wave/ship -->
+  <path d="M25,48 Q35,35 45,48" fill="none" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M20,55 Q35,42 50,55" fill="none" stroke="#09227e" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Text -->
+  <text x="62" y="48" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#09227e">VI</text>
+  <text x="98" y="48" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#c0392b">MC</text>
+  <!-- Subtitle -->
+  <text x="62" y="60" font-family="Arial, sans-serif" font-size="7" fill="#666" letter-spacing="1">MARITIME CORPORATION</text>
+</svg>

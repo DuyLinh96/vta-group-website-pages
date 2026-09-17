@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- TAN CANG - red, port crane icon -->
+  <rect width="200" height="80" fill="white"/>
+  <!-- Port crane icon -->
+  <line x1="30" y1="58" x2="30" y2="22" stroke="#c0392b" stroke-width="2.5"/>
+  <line x1="30" y1="22" x2="50" y2="28" stroke="#c0392b" stroke-width="2"/>
+  <line x1="30" y1="30" x2="18" y2="38" stroke="#c0392b" stroke-width="2"/>
+  <line x1="50" y1="28" x2="50" y2="38" stroke="#c0392b" stroke-width="1.5"/>
+  <rect x="46" y="38" width="8" height="8" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+  <!-- Base -->
+  <line x1="22" y1="58" x2="38" y2="58" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+  <!-- Text -->
+  <text x="65" y="38" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#c0392b">TAN CANG</text>
+  <!-- Subtitle -->
+  <text x="65" y="52" font-family="Arial, sans-serif" font-size="7" fill="#e74c3c" letter-spacing="2">SAIGON PORT</text>
+  <!-- Accent -->
+  <rect x="65" y="55" width="80" height="1.5" rx="0.75" fill="#e74c3c" opacity="0.5"/>
+</svg>

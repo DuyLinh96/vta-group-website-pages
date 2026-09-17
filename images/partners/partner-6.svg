@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- HAIDANG - blue, lighthouse icon -->
+  <rect width="200" height="80" fill="white"/>
+  <!-- Lighthouse -->
+  <polygon points="30,58 25,58 28,28 37,28 40,58" fill="#09227e"/>
+  <!-- Lighthouse stripes -->
+  <rect x="28" y="35" width="9" height="4" fill="white" opacity="0.4"/>
+  <rect x="27" y="45" width="10" height="4" fill="white" opacity="0.4"/>
+  <!-- Lighthouse top -->
+  <rect x="29" y="22" width="7" height="8" rx="1" fill="#1dafec"/>
+  <polygon points="27,22 38,22 33,17" fill="#09227e"/>
+  <!-- Light beams -->
+  <line x1="22" y1="20" x2="12" y2="15" stroke="#FFD700" stroke-width="1.5" opacity="0.7"/>
+  <line x1="22" y1="25" x2="10" y2="25" stroke="#FFD700" stroke-width="1.5" opacity="0.6"/>
+  <line x1="43" y1="20" x2="53" y2="15" stroke="#FFD700" stroke-width="1.5" opacity="0.7"/>
+  <line x1="43" y1="25" x2="55" y2="25" stroke="#FFD700" stroke-width="1.5" opacity="0.6"/>
+  <!-- Text -->
+  <text x="62" y="42" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#09227e">HAIDANG</text>
+  <!-- Subtitle -->
+  <text x="62" y="55" font-family="Arial, sans-serif" font-size="7" fill="#1dafec" letter-spacing="1">LIGHTHOUSE CO.</text>
+  <!-- Wave under lighthouse -->
+  <path d="M18,60 Q28,56 38,60 Q48,64 58,60" fill="none" stroke="#1dafec" stroke-width="1.5" opacity="0.5"/>
+</svg>

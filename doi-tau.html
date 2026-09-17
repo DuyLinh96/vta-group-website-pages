@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Phương tiện và năng lực vận hành của VTA Group - Tổ chức vận tải thủy, xếp dỡ và phối hợp vận hành theo nhu cầu từng loại hàng.">
+    <meta name="keywords" content="VTA Group, phương tiện vận tải, năng lực vận hành, vận tải thủy, xếp dỡ, phối hợp vận hành">
+    <meta name="author" content="VTA Group">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vtagroup.vn/doi-tau.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Phương tiện &amp; năng lực vận hành - VTA Group">
+    <meta property="og:description" content="Phương tiện và năng lực vận hành của VTA Group - Tổ chức vận tải thủy, xếp dỡ và phối hợp vận hành theo nhu cầu từng loại hàng.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vtagroup.vn/doi-tau.html">
+    <meta property="og:image" content="https://vtagroup.vn/images/banner/banner-1.jpg">
+    <meta property="og:image:alt" content="Tàu vận tải của VTA Group trên đường thủy">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:site_name" content="VTA Group">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Phương tiện &amp; năng lực vận hành - VTA Group">
+    <meta name="twitter:description" content="Phương tiện và năng lực vận hành của VTA Group - Tổ chức vận tải thủy, xếp dỡ và phối hợp vận hành theo nhu cầu từng loại hàng.">
+    <meta name="twitter:image" content="https://vtagroup.vn/images/banner/banner-1.jpg">
+    <meta name="twitter:image:alt" content="Tàu vận tải của VTA Group trên đường thủy">
+
+    <title>Phương tiện & năng lực vận hành - VTA Group</title>
+    <link rel="icon" href="images/logo/logo-vta.svg" type="image/svg+xml">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Swiper.js -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css?v=20260731-nav" rel="stylesheet">
+    <link href="css/responsive.css?v=20260731-nav" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+    <link href="css/tech-backgrounds.css?v=20260731-nav" rel="stylesheet">
+
+    <style>
+        .page-banner {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-darker) 100%);
+            padding: 60px 0 40px;
+            color: var(--color-white);
+        }
+        .page-banner h1 {
+            font-family: var(--font-secondary);
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .breadcrumb-nav {
+            background-color: var(--color-light);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .breadcrumb-nav ul {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        .breadcrumb-nav ul li a {
+            color: var(--color-accent);
+        }
+        .breadcrumb-nav ul li a:hover {
+            color: var(--color-primary);
+        }
+        .breadcrumb-nav ul li::after {
+            content: '\f105';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 11px;
+            margin-left: 8px;
+            color: var(--color-text);
+        }
+        .breadcrumb-nav ul li:last-child::after {
+            display: none;
+        }
+        .breadcrumb-nav ul li:last-child {
+            color: var(--color-text);
+        }
+        /* Fleet stats */
+        .fleet-stats {
+            background: linear-gradient(135deg, rgba(90, 176, 199, 0.16) 0%, var(--color-white) 48%, rgba(90, 176, 199, 0.24) 100%);
+            padding: 34px 0;
+            border-top: 1px solid rgba(90, 176, 199, 0.28);
+            border-bottom: 1px solid rgba(90, 176, 199, 0.28);
+        }
+        .fleet-stats__inner {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+            color: var(--color-dark);
+        }
+        .fleet-stats__item {
+            padding: 24px 18px;
+            background: var(--color-white);
+            border: 1px solid rgba(90, 176, 199, 0.32);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 12px 28px rgba(90, 176, 199, 0.16);
+            transition: var(--transition);
+        }
+        .fleet-stats__item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 34px rgba(90, 176, 199, 0.24);
+        }
+        .fleet-stats__item h3 {
+            font-family: var(--font-secondary);
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--color-accent);
+        }
+        .fleet-stats__item p {
+            font-size: 14px;
+            color: var(--color-text);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0;
+        }
+        .fleet-stats__item h3 {
+            min-height: 44px;
+        }
+        /* Fleet page grid */
+        .fleet-page__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .fleet-page__card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .fleet-page__card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .fleet-page__image {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+        .fleet-page__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+            background: linear-gradient(135deg, var(--color-lighter), var(--color-text));
+        }
+        .fleet-page__card:hover .fleet-page__image img {
+            transform: scale(1.05);
+        }
+        .fleet-page__status {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+            color: var(--color-white);
+        }
+        .fleet-page__status--active {
+            background-color: var(--color-accent);
+        }
+        .fleet-page__name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: var(--color-white);
+        }
+        .fleet-page__name h3 {
+            font-family: var(--font-secondary);
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .fleet-page__details {
+            padding: 20px;
+        }
+        .fleet-page__details table {
+            width: 100%;
+        }
+        .fleet-page__details table td {
+            padding: 8px 0;
+            font-size: 14px;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .fleet-page__details table tr:last-child td {
+            border-bottom: none;
+        }
+        .fleet-page__details table td:first-child {
+            color: var(--color-text);
+            font-weight: 500;
+            width: 40%;
+        }
+        .fleet-page__details table td:last-child {
+            color: var(--color-dark);
+            font-weight: 600;
+        }
+        @media (max-width: 992px) {
+            .fleet-page__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .fleet-stats__inner {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 576px) {
+            .fleet-page__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== TOP BAR ========== -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar__inner">
+                <div class="top-bar__welcome">
+                    <span>Chào mừng đến với VTA Group</span>
+                </div>
+                <div class="top-bar__right">
+                    <div class="top-bar__contact">
+                        <a href="tel:+84908306127"><i class="fas fa-phone-alt"></i> 0908 306 127</a>
+                        <a href="mailto:tnhhxnkvta@gmail.com"><i class="fas fa-envelope"></i> tnhhxnkvta@gmail.com</a>
+                    </div>
+                    <div class="top-bar__social">
+                        <span aria-hidden="true"><i class="fab fa-facebook-f"></i></span>
+                        <span aria-hidden="true"><i class="fas fa-comment-dots"></i></span>
+                        <span aria-hidden="true"><i class="fab fa-youtube"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <div class="header__logo-text">
+                            <span class="header__logo-name">VTA GROUP</span>
+                            <span class="header__logo-slogan">Vững bước thành công</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="header__info">
+                    <div class="header__info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Trụ sở chính</strong>
+                            <span>Khu Lĩnh Đông, Phường Phạm Thái, Thị xã Kinh Môn, Tỉnh Hải Dương</span>
+                        </div>
+                    </div>
+                    <div class="header__info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Giờ làm việc</strong>
+                            <span>Thứ 2 - Thứ 7: 8:00 - 17:30</span>
+                        </div>
+                    </div>
+                    <div class="header__info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Hotline</strong>
+                            <span>0908 306 127</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="main-nav" id="mainNav">
+        <div class="container">
+            <div class="main-nav__inner">
+                <a href="index.html" class="main-nav__brand" aria-label="VTA Group"><img src="images/logo/vta-logo-light-mode.png" alt="VTA Group"></a>
+                <button class="main-nav__toggle" id="navToggle" aria-label="Mở menu" aria-controls="navMenu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="main-nav__menu" id="navMenu">
+                    <li class="main-nav__item">
+                        <a href="index.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--dropdown active">
+                        <a href="dich-vu.html" aria-haspopup="true" aria-expanded="false">LĨNH VỰC HOẠT ĐỘNG <i class="fas fa-chevron-down"></i></a>
+                        <ul class="main-nav__dropdown main-nav__mega">
+                            <li class="main-nav__mega-col"><span class="main-nav__mega-title">Chuỗi vận hành</span><a href="dich-vu.html#khai-thac-cang-bien">Khai thác cảng biển</a><a href="dich-vu.html#van-tai-duong-thuy">Vận tải đường thủy</a></li>
+                            <li class="main-nav__mega-col"><span class="main-nav__mega-title">Thương mại & hỗ trợ</span><a href="dich-vu.html#thuong-mai-than">Thương mại than</a><a href="dich-vu.html#thuong-mai-cap-dien">Thương mại cáp điện</a><a href="dich-vu.html#kinh-doanh-van-tai-xep-do">Vận tải và xếp dỡ</a></li>
+                            <li class="main-nav__mega-col"><span class="main-nav__mega-title">Theo nhu cầu</span><a href="lien-he.html">Tư vấn tuyến vận chuyển</a><a href="lien-he.html">Yêu cầu báo giá</a><a href="doi-tau.html">Năng lực phương tiện</a></li>
+                            <li class="main-nav__mega-card"><span>Giải pháp tích hợp</span><strong>Một đầu mối cho cảng biển, vận tải thủy và xếp dỡ</strong><a href="lien-he.html">Trao đổi nhu cầu <i class="fas fa-arrow-right"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item main-nav__item--dropdown">
+                        <a href="tin-tuc.html" aria-haspopup="true" aria-expanded="false">TIN TỨC <i class="fas fa-chevron-down"></i></a>
+                        <ul class="main-nav__dropdown">
+                            <li><a href="tin-tuc.html#tin-cong-ty">Tin công ty</a></li>
+                            <li><a href="tin-tuc.html#tin-nganh">Tin ngành hàng hải</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="tuyen-dung.html">TUYỂN DỤNG</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="lien-he.html">LIÊN HỆ</a>
+                    </li>
+                </ul>
+                <div class="main-nav__search" data-nav-search>
+                    <form action="tin-tuc.html" method="get" role="search">
+                        <label class="visually-hidden" for="siteSearch">Tìm kiếm</label>
+                        <input type="search" id="siteSearch" name="q" placeholder="Tìm kiếm..." autocomplete="off">
+                        <button type="submit" aria-label="Mở tìm kiếm" aria-expanded="false">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE BANNER ========== -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Đội tàu</h1>
+            <p>Đội tàu đa dạng trọng tải, sẵn sàng đáp ứng nhu cầu vận tải thủy, xếp dỡ và phối hợp vận hành.</p>
+        </div>
+    </section>
+
+    <!-- ========== BREADCRUMB ========== -->
+    <div class="breadcrumb-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li>Đội tàu</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ========== FLEET STATS ========== -->
+    <section class="fleet-stats">
+        <div class="container">
+            <div class="fleet-stats__inner">
+                <div class="fleet-stats__item" data-aos="fade-up" data-aos-delay="100">
+                    <h3>10+</h3>
+                    <p>Tổng số tàu</p>
+                </div>
+                <div class="fleet-stats__item" data-aos="fade-up" data-aos-delay="200">
+                    <h3>20.000+</h3>
+                    <p>Tổng trọng tải (DWT)</p>
+                </div>
+                <div class="fleet-stats__item" data-aos="fade-up" data-aos-delay="300">
+                    <h3>50+</h3>
+                    <p>Thuyền viên</p>
+                </div>
+                <div class="fleet-stats__item" data-aos="fade-up" data-aos-delay="400">
+                    <h3>24/7</h3>
+                    <p>Sẵn sàng phục vụ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FLEET GRID ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <div class="section__label">Năng lực vận hành</div>
+                <h2 class="section__title">Phương tiện & dịch vụ hỗ trợ</h2>
+                <p class="section__desc">VTA Group phối hợp phương tiện, thiết bị và nhân sự vận hành theo yêu cầu thực tế của khách hàng. Các thông số chi tiết được tư vấn theo từng tuyến và loại hàng.</p>
+            </div>
+
+            <div class="fleet-page__grid">
+                <!-- Capability 01 -->
+                <div class="fleet-page__card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="fleet-page__image">
+                        <img src="images/fleet/tau-1.jpg" alt="Vận tải hàng rời" loading="lazy">
+                        <span class="fleet-page__status fleet-page__status--active">Sẵn sàng</span>
+                        <div class="fleet-page__name">
+                            <h3>Vận tải hàng rời</h3>
+                        </div>
+                    </div>
+                    <div class="fleet-page__details">
+                        <table>
+                            <tr>
+                                <td>Phù hợp</td>
+                                <td>Hàng khối lượng lớn</td>
+                            </tr>
+                            <tr>
+                                <td>Loại hàng</td>
+                                <td>Than, khoáng sản, vật liệu</td>
+                            </tr>
+                            <tr>
+                                <td>Tuyến</td>
+                                <td>Theo nhu cầu thực tế</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Capability 02 -->
+                <div class="fleet-page__card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="fleet-page__image">
+                        <img src="images/fleet/tau-2.jpg" alt="Khai thác và xếp dỡ hàng hóa" loading="lazy">
+                        <span class="fleet-page__status fleet-page__status--active">Sẵn sàng</span>
+                        <div class="fleet-page__name">
+                            <h3>Khai thác & xếp dỡ</h3>
+                        </div>
+                    </div>
+                    <div class="fleet-page__details">
+                        <table>
+                            <tr>
+                                <td>Phù hợp</td>
+                                <td>Hàng qua cảng/bến</td>
+                            </tr>
+                            <tr>
+                                <td>Dịch vụ</td>
+                                <td>Bốc xếp, giao nhận, phối hợp vận tải</td>
+                            </tr>
+                            <tr>
+                                <td>Mục tiêu</td>
+                                <td>An toàn, đúng kế hoạch</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Capability 03 -->
+                <div class="fleet-page__card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="fleet-page__image">
+                        <img src="images/fleet/tau-3.jpg" alt="Hoạt động phối hợp vận tải" loading="lazy">
+                        <span class="fleet-page__status fleet-page__status--active">Sẵn sàng</span>
+                        <div class="fleet-page__name">
+                            <h3>Phối hợp vận hành</h3>
+                        </div>
+                    </div>
+                    <div class="fleet-page__details">
+                        <table>
+                            <tr>
+                                <td>Phù hợp</td>
+                                <td>Lô hàng cần điều phối nhiều khâu</td>
+                            </tr>
+                            <tr>
+                                <td>Dịch vụ</td>
+                                <td>Giao nhận, lưu kho, vận chuyển</td>
+                            </tr>
+                            <tr>
+                                <td>Cách làm</td>
+                                <td>Linh hoạt theo từng lô hàng</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Capability 04 -->
+                <div class="fleet-page__card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="fleet-page__image">
+                        <img src="images/fleet/tau-1.jpg" alt="Tư vấn tuyến vận chuyển" loading="lazy">
+                        <span class="fleet-page__status fleet-page__status--active">Tư vấn</span>
+                        <div class="fleet-page__name">
+                            <h3>Tư vấn tuyến vận chuyển</h3>
+                        </div>
+                    </div>
+                    <div class="fleet-page__details">
+                        <table>
+                            <tr>
+                                <td>Phù hợp</td>
+                                <td>Doanh nghiệp cần tối ưu tuyến</td>
+                            </tr>
+                            <tr>
+                                <td>Đầu vào</td>
+                                <td>Loại hàng, điểm đi/đến, tiến độ</td>
+                            </tr>
+                            <tr>
+                                <td>Kết quả</td>
+                                <td>Phương án vận tải phù hợp</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Capability 05 -->
+                <div class="fleet-page__card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="fleet-page__image">
+                        <img src="images/fleet/tau-2.jpg" alt="Kiểm soát an toàn hàng hóa" loading="lazy">
+                        <span class="fleet-page__status fleet-page__status--active">Kiểm soát</span>
+                        <div class="fleet-page__name">
+                            <h3>An toàn hàng hóa</h3>
+                        </div>
+                    </div>
+                    <div class="fleet-page__details">
+                        <table>
+                            <tr>
+                                <td>Trọng tâm</td>
+                                <td>Hàng hóa, phương tiện, con người</td>
+                            </tr>
+                            <tr>
+                                <td>Thực hiện</td>
+                                <td>Phối hợp quy trình vận hành</td>
+                            </tr>
+                            <tr>
+                                <td>Theo dõi</td>
+                                <td>Thông tin cập nhật theo kế hoạch</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Capability 06 -->
+                <div class="fleet-page__card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="fleet-page__image">
+                        <img src="images/fleet/tau-3.jpg" alt="Hỗ trợ thương mại hàng hóa" loading="lazy">
+                        <span class="fleet-page__status fleet-page__status--active">Hỗ trợ</span>
+                        <div class="fleet-page__name">
+                            <h3>Hỗ trợ thương mại</h3>
+                        </div>
+                    </div>
+                    <div class="fleet-page__details">
+                        <table>
+                            <tr>
+                                <td>Nhóm hàng</td>
+                                <td>Than, cáp điện, vật tư công nghiệp</td>
+                            </tr>
+                            <tr>
+                                <td>Vai trò</td>
+                                <td>Kết nối nguồn hàng và vận hành</td>
+                            </tr>
+                            <tr>
+                                <td>Phối hợp</td>
+                                <td>Theo yêu cầu khách hàng</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta">
+        <div class="cta__overlay"></div>
+        <div class="container">
+            <div class="cta__content" data-aos="fade-up">
+                <h2>Cần phương án vận tải hoặc xếp dỡ?</h2>
+                <p>Liên hệ VTA Group để được tư vấn phương án phù hợp với loại hàng, tuyến vận chuyển và tiến độ thực tế.</p>
+                <div class="cta__buttons">
+                    <a href="lien-he.html" class="btn btn--white">Liên hệ ngay</a>
+                    <a href="tel:+84908306127" class="btn btn--outline-white"><i class="fas fa-phone-alt"></i> 0908 306 127</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col footer__col--info">
+                    <div class="footer__logo">
+                        <span class="footer__logo-name">VTA GROUP</span>
+                        <span class="footer__logo-slogan">Vững bước thành công</span>
+                    </div>
+                    <ul class="footer__contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Trụ sở chính: Khu Lĩnh Đông, Phường Phạm Thái, Thị xã Kinh Môn, Tỉnh Hải Dương</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>0908 306 127</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>tnhhxnkvta@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-building"></i>
+                            <span>Văn phòng Hà Nội: Tòa nhà Moonlight, 5/6 Vũ Đức Thận, Việt Hưng, Long Biên, Hà Nội</span>
+                        </li>
+                    </ul>
+                    <div class="footer__social">
+                        <span aria-hidden="true"><i class="fab fa-facebook-f"></i></span>
+                        <span aria-hidden="true"><i class="fas fa-comment-dots"></i></span>
+                        <span aria-hidden="true"><i class="fab fa-youtube"></i></span>
+                        <span aria-hidden="true"><i class="fab fa-linkedin-in"></i></span>
+                    </div>
+                </div>
+                <div class="footer__col footer__col--links">
+                    <h3 class="footer__title">Danh mục</h3>
+                    <ul class="footer__menu">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="dich-vu.html">Lĩnh vực hoạt động</a></li>
+                        <li><a href="tin-tuc.html">Tin tức</a></li>
+                        <li><a href="tuyen-dung.html">Tuyển dụng</a></li>
+                        <li><a href="lien-he.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col footer__col--services">
+                    <h3 class="footer__title">Lĩnh vực hoạt động</h3>
+                    <ul class="footer__menu">
+                        <li><a href="dich-vu.html#khai-thac-cang-bien">Khai thác cảng biển</a></li>
+                        <li><a href="dich-vu.html#van-tai-duong-thuy">Vận tải đường thủy</a></li>
+                        <li><a href="dich-vu.html#thuong-mai-than">Thương mại than</a></li>
+                        <li><a href="dich-vu.html#thuong-mai-cap-dien">Thương mại cáp điện</a></li>
+                        <li><a href="dich-vu.html#kinh-doanh-van-tai-xep-do">Kinh doanh vận tải và xếp dỡ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col footer__col--map">
+                    <h3 class="footer__title">Bản đồ</h3>
+                    <div class="footer__map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59587.97785448771!2d106.2841962!3d20.9373413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31359b7e7d0c5f15%3A0x2b1e7f5c5b7f7c0a!2zSOG6o2kgRMawxqFuZw!5e0!3m2!1svi!2svn!4v1700000000000"
+                            width="100%"
+                            height="200"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Bản đồ VTA Group">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>&copy; 2022 - 2024 VTA Group. Bản quyền thuộc về VTA Group. Vững bước thành công.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== BACK TO TOP ========== -->
+    <button class="back-to-top" id="backToTop" aria-label="Về đầu trang">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
